@@ -25,6 +25,7 @@ $row=[
 ];
 print_r($row);
 insert('upload',$row);
+header('location:manage.php');
 }
 ?>
 <!DOCTYPE html>
@@ -34,7 +35,17 @@ insert('upload',$row);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>檔案上傳</title>
+    <a href="manage.php" style="display: block;width:100px;margin:auto;">檔案管理</a>
     <link rel="stylesheet" href="style.css">
+    <style>
+        table{
+            border-collapse:collapse; 
+            border:1px solid black;
+        }
+        td{
+    border:1px solid black;
+}
+    </style>
 </head>
 <body>
  <h1 class="header">檔案上傳練習</h1>
